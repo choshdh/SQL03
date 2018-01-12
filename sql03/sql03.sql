@@ -5,11 +5,11 @@
 
 select es1.employee_id,
 		es1.first_name,
-		es1.department_id,
+		d.department_name,
 		es1.manager_id,
 		es2.first_name
-from employees es1, employees es2
-where es1.manager_id = es2.employee_id;
+from employees es1, employees es2, departments d
+where es1.manager_id = es2.employee_id (+) and es1.department_id = d.department_id (+);
 
 
 --문제2.

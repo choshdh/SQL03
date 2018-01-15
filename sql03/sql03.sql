@@ -60,7 +60,7 @@ where es.employee_id = jh.employee_id and jh.job_id = js.job_id and job_title='P
 
 select employee_id,
 		first_name,
-		last_name
+		last_name,
 		department_name
 from employees es, departments ds
 where es.department_id= ds.department_id
